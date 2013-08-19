@@ -1,1 +1,27 @@
-body { color: blue; }
+html { margin:0; padding:0;}
+body {margin:0; padding:0; font-size:62.5%; font-family:"colaborate-regularregular"; background:#fff url(../images/fondoOscuro.png) repeat 0 0}
+
+h1 { font-size:3em; padding:0.5em; margin:0; color:#333; font-weight:normal;}
+
+#wrapper { width:98em; margin:0 auto; background:#fff url(../images/fondoClaro.png) repeat 0 0}
+#header { margin:1em 0; width:100%;} 
+
+#cubo { width:100%; padding:3em 0;}
+#cubo nav#opcionesCubo { width:59em; margin:0 auto; }
+#cubo nav#opcionesCubo ul{ margin:0; padding:0; list-style:none; width:59em;}
+#cubo nav#opcionesCubo ul li { display:inline; display:inline-block; width:18em; height:18em; margin:0 2em 2em 0; padding:0; background:#666 url(../images/fondoOpcion.png) repeat 0 0; border-radius:1em;
+							-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;-o-transition: all 0.3s ease-in-out;-ms-transition: all 0.3s ease-in-out;}
+
+#cubo nav#opcionesCubo ul li:hover {transform: scale(1.1,1.1);-ms-transform: scale(1.1,1.1); -webkit-transform: scale(1.1,1.1);}							
+#cubo nav#opcionesCubo ul li.finfila { margin-right:0;}
+#cubo nav#opcionesCubo ul li a {display:block; text-align:center; width:18em; height:4em; padding:14em 0 0 0; color:#fff; text-decoration:none; }
+#cubo nav#opcionesCubo ul li a span { font-size:1.8em; text-shadow: 1px 1px 1px #444;}
+#cubo nav#opcionesCubo ul li#tipografias a { background:url(../images/tipografias.png) center 1.3em no-repeat;}
+#cubo nav#opcionesCubo ul li#videos a{ background:url(../images/videos.png) center 1.3em no-repeat;}
+#cubo nav#opcionesCubo ul li#html5 a{ background:url(../images/html5.png) center 1.3em no-repeat;}
+#cubo nav#opcionesCubo ul li#canvas a{ background:url(../images/canvas.png) center 1.3em no-repeat;}
+#cubo nav#opcionesCubo ul li#js a{ background:url(../images/javascript.png) center 1.3em no-repeat;}
+#cubo nav#opcionesCubo ul li#semantica a{ background:url(../images/semantica.png) center 1.3em no-repeat;}
+#cubo nav#opcionesCubo ul li#geolocalizacion a{ background:url(../images/geolocalizacion.png) center 1.3em no-repeat;}
+#cubo nav#opcionesCubo ul li#sesiones a{ background:url(../images/sesiones.png) center 1.3em no-repeat;}
+#cubo nav#opcionesCubo ul li#responsivo a { background:url(../images/responsivo.png) center 1.3em no-repeat;}
