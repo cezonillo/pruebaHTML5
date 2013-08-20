@@ -123,7 +123,7 @@ $(document).ready(function(){
 			div: '#map',
 			lat: position.coords.latitude,
 			lng: position.coords.longitude,
-			height: '500px',
+			height: '400px',
 			width:'580px'
 		});
 		
