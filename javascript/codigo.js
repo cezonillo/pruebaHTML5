@@ -1,6 +1,7 @@
 /***Lanzamos la funcion cuando se carga el documento***/
 $(document).ready(function(){
 	
+	/*****Aplicamos movimiento al cubo en funcion de la opción clickcada***/
 	$('#tipografias a').on('click', function(){
 		$('#cubo').addClass('hoverIzq');	
 		setTimeout(function(){$('#opcionesCubo').hide();},400)		
@@ -74,6 +75,26 @@ $(document).ready(function(){
 		},400)		
 		$('#opcionesCubo').show();		
 	})
+	/******fin movimiento cubo****/
 	
+	/*****funciones para resetear y fullscreen del video****/
+	/****resetear el video****/
+	$('.reseteaVideo').on('click', function(){
+		var video = document.getElementById("tubo");
+		if(video != null){
+			video.currentTime=0;
+		}
+	})
+	
+	/*****pantalla completa****/
+	$('.fullScreen').on('click', function(){
+		var video = document.getElementById("tubo");
+		if(video != null){
+			//Para Chromey Safari
+			video.webkitEnterFullScreen();
+			//Para firefox
+			video.mozRequestFullScreen();
+		}
+	})
 	
 })
