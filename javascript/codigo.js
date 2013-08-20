@@ -1,3 +1,9 @@
+/*****variables javascript***/
+
+/***A utilizar durante la geolocalización****/
+var map;
+
+
 /***Lanzamos la funcion cuando se carga el documento***/
 $(document).ready(function(){
 	
@@ -96,5 +102,57 @@ $(document).ready(function(){
 			video.mozRequestFullScreen();
 		}
 	})
+	/******fin funciones vídeo****/
+	
+	
+	/******funciones de geolocalización****/
+	$("button#geo").click(
+		function(){
+			getGeolocation();
+		}
+	);
+	
+	/*** Calcula la Geolocalización**** */
+	function getGeolocation() {
+		return navigator.geolocation.getCurrentPosition(handleGeolocation, handleErrors);
+	}
+	
+	/*** Muestra un mapa, Google Maps, con los datos de la Geolocalización. ******/
+	function handleGeolocation(position) {
+		map = new GMaps({
+			div: '#map',
+			lat: position.coords.latitude,
+			lng: position.coords.longitude,
+			height: '500px',
+			width:'580px'
+		});
+		
+		map.addMarker({
+  			lat: position.coords.latitude,
+			lng: position.coords.longitude,
+			title: 'Estoy Aquí'
+		});
+	} 
+	
+	/*** Controla los errores******/
+	function handleErrors(error){
+		switch(error.code)
+		{
+			case error.PERMISSION_DENIED:
+				alert("No tienes permisos para utilizar la Geolocalización de Google");
+				break;
+			case error.POSITION_UNAVAILABLE:
+				break;
+				alert("No se puede determinar tu posición");
+			case error.TIMEOUT:
+				alert("Se agotó el tiempo de espera");
+				break;
+			default:
+				alert("Algo ha ido mal, inténtalo de nuevo");
+				break;
+		}
+	}
+	
+	
 	
 })
