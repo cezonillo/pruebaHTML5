@@ -100,7 +100,25 @@
 				</section>
 				
 				<section id="seccionSemantica" class="seccion seccionAbajo">
-					<h2>Web semántica</h2>					
+					<h2>Web semántica</h2>	
+					<p>El futuro de la Web, tiende a lo que se llama Web Semántica, una Web que las máquinas "entiendan", y que facilite al usuario a disponer de aquella información que sea de su interés. Se trata así de dotar de "inteligencia" a la Web.</p>
+					<p>En la parte de la "vista", una de las maneras de ayudar a las máquinas a entender la información, es a través de los microdatos y de un marcado correcto y completo. A continuación mostramos un ejemplo de microdatos.</p>
+					<p>Código sin microdatos:</p>
+					<textarea class="codigo">
+						<div>Mi nombre es Juan Ramón Martínez, pero me llaman cezonillo.
+						Esta es mi página principal: <a href="http://www.cezonillo.com">www.cezonillo.com</a>.
+						Vivo en Pola de Siero (Asturias) y trabajo de diseñador/maquetador Web en B2B 2000 S.A.
+						</div>
+					</textarea>
+					<p>Código con microdatos:</p>
+					<textarea class="codigo">
+					<div itemscope itemtype="http://data-vocabulary.org/Person"> Mi nombre es <span itemprop="name">Juan Ramón Martínez</span>, pero me llaman <span itemprop="nickname">cezonillo</span>. 
+					Esta es mi página principal: <a href="http://www.cezonillo.com" itemprop="url">www.cezonillo.com</a>.
+					Vivo en Pola de Siero (Asturias) y trabajo de <span itemprop="title">diseñador/maquetador Web</span>
+						  
+						  en <span itemprop="affiliation">B2B 2000 S.A</span>.
+						</div>
+					</textarea>
 					<p class="volver"><a href="javascript:;">volver al inicio</a></p>
 				</section>
 				

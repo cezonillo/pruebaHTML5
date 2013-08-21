@@ -56,11 +56,13 @@ p.tipografia3 {font-family:'exoblack'}
 p.volver { text-align:right; margin-top:2em;}
 p.volver a , p a{ color:#336699; text-decoration:underline;}
 p.volver a:hover, p a:hover {text-decoration:none;}
-#seccionResponsivo { margin-top:-5em;}
+#seccionResponsivo, #seccionSemantica { margin-top:-5em;}
+#seccionSemantica {height:77em;}
 
 
 .destacado {color:#336699;}
 .tac {text-align:center}
+.codigo { width:40em; height:10em; margin-left:5em;}
 
 /********responsivo**********/
 @media all and (min-width: 0px) and (max-width: 980px) {
