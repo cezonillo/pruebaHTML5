@@ -64,6 +64,10 @@ p.volver a:hover, p a:hover {text-decoration:none;}
 .tac {text-align:center}
 .codigo { width:40em; height:10em; margin-left:5em;}
 
+
+/*****javascript galleria*****/
+#galleria{height:320px}
+
 /********responsivo**********/
 @media all and (min-width: 0px) and (max-width: 980px) {
 	#wrapper {width:100%}
