@@ -2,20 +2,20 @@ html { margin:0; padding:0;}
 body {margin:0; padding:0; font-size:62.5%; font-family:"colaborate-regularregular"; background:#fff url(../images/fondoOscuro.png) repeat 0 0}
 
 h1 { font-size:3em; padding:0.5em; margin:0; color:#333; font-weight:normal;}
-h2 { font-size:2.4em; padding:1em 0; color:#4e4e4e; font-weight:normal; margin-top:0;}
+h2 { font-size:2.4em; padding:1em 0; color:#4e4e4e; font-weight:normal; margin:0;}
 
 #wrapper { width:98em; margin:0 auto; background:#fff url(../images/fondoClaro.png) repeat 0 0}
 #header { margin:1em 0; width:100%;} 
 
-#contenedorCubo { width:59em; height:60em; padding:3em 0; position:relative; margin:0 auto; -webkit-perspective: 4000px;}
-#cubo {width:59em; height:60em; -webkit-transform-style: preserve-3d;-webkit-transform: transform .8s; -webkit-transition: all .8s;}
+#contenedorCubo { width:59em; min-height:70em; padding:3em 0; position:relative; margin:0 auto; -webkit-perspective: 4000px;}
+#cubo {float:left;width:59em; height:60em; -webkit-transform-style: preserve-3d;-webkit-transform: transform .8s; -webkit-transition: all .8s;}
 #contenedorCubo nav#opcionesCubo { width:59em; height:60em; position:absolute; top:0; -webkit-transform: translateZ(30em); -webkit-transition: all .8s;}
-#contenedorCubo nav#opcionesCubo ul{ margin:0; padding:0; list-style:none; width:59em;}
-#contenedorCubo nav#opcionesCubo ul li { display:inline; display:inline-block; width:18em; height:18em; margin:0 2em 2em 0; padding:0; background:#666 url(../images/fondoOpcion.png) repeat 0 0; border-radius:1em;
+#contenedorCubo nav#opcionesCubo ul,  #seccionResponsivo ul{ margin:0; padding:0; list-style:none; width:59em;}
+#contenedorCubo nav#opcionesCubo ul li, #seccionResponsivo ul li { display:inline; display:inline-block; width:18em; height:18em; margin:0 2em 2em 0; padding:0; background:#666 url(../images/fondoOpcion.png) repeat 0 0; border-radius:1em;
 							-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;}
 
 #contenedorCubo nav#opcionesCubo ul li:hover {transform: scale(1.1,1.1);-ms-transform: scale(1.1,1.1); -webkit-transform: scale(1.1,1.1); opacity:0.8; filter:alpha(opacity=80)}							
-#contenedorCubo nav#opcionesCubo ul li.finfila { margin-right:0;}
+#contenedorCubo nav#opcionesCubo ul li.finfila, #seccionResponsivo ul li.finfila { margin-right:0;}
 #contenedorCubo nav#opcionesCubo ul li a {display:block; text-align:center; width:18em; height:4em; padding:14em 0 0 0; color:#fff; text-decoration:none; }
 #contenedorCubo nav#opcionesCubo ul li a span { font-size:1.8em; text-shadow: 1px 1px 1px #444;}
 #contenedorCubo nav#opcionesCubo ul li#tipografias a { background:url(../images/tipografias.png) center 1.3em no-repeat;}
@@ -52,13 +52,42 @@ p.tipografia3 {font-family:'exoblack'}
 #geo:hover {opacity:0.8; filter:alpha(opacity="80"); cursor:pointer;}
 
 
-
-
 /*****estilos varios****/
 p.volver { text-align:right; margin-top:2em;}
 p.volver a , p a{ color:#336699; text-decoration:underline;}
 p.volver a:hover, p a:hover {text-decoration:none;}
+#seccionResponsivo { margin-top:-5em;}
 
 
 .destacado {color:#336699;}
 .tac {text-align:center}
+
+/********responsivo**********/
+@media all and (min-width: 0px) and (max-width: 980px) {
+	#wrapper {width:100%}
+}
+
+@media all and (min-width: 0px) and (max-width: 660px) {
+	#wrapper, #contenedorCubo, #cubo, #seccionResponsivo ul, .seccion  {width:100%;}
+	#seccionResponsivo {margin-top:0;}
+	#seccionResponsivo ul li { margin-right:2% !important; width:28%; height:15em;}
+	#seccionResponsivo h2 {display:none;}	
+	p.volver {text-align:left;}
+}
+
+@media all and (min-width: 0px) and (max-width: 560px) {
+	#seccionResponsivo ul li {height:12.5em;}
+}
+
+@media all and (min-width: 0px) and (max-width: 460px) {
+	#seccionResponsivo ul li {height:10em;}
+}
+
+@media all and (min-width: 0px) and (max-width: 360px) {
+	#seccionResponsivo ul li {height:7.5em;}
+}
+
+@media all and (min-width: 0px) and (max-width: 260px) {
+	#seccionResponsivo ul li { width:85%; }
+	#contenedorCubo {height:92em;}
+}

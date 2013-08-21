@@ -2,6 +2,7 @@
 
 /***A utilizar durante la geolocalización****/
 var map;
+var noSesion;
 
 
 /***Lanzamos la funcion cuando se carga el documento***/
@@ -152,6 +153,116 @@ $(document).ready(function(){
 				break;
 		}
 	}
+	/******fin funciones de geolocalización****/
+	
+	/*****sesiones****/
+	if (!localStorage) {
+		alert("Tu navegador no soporta Local Storage API");
+	}	
+	$("#add1").click(function(event) {
+	addElemento(1);
+	});
+
+	$("#add2").click(function(event) {
+		addElementoSession(2);
+	});
+	
+	$("#add3").click(function(event) {
+		addElementoNoSession(3);
+	});
+	
+	$("#rem1").click(function(event) {
+		remElemento(1);
+	});
+
+	$("#rem2").click(function(event) {
+		remElementoSession(2);
+	});
+	
+	$("#rem3").click(function(event) {
+		remElementoNoSession(3);
+	});
+
+	updateElemento(1);
+	updateElementoSession(2);
+	updateElementoNoSession(3);
+	
+
+	function addElemento(elemento) {
+		cantidad = localStorage.getItem(elemento);
+		if (cantidad == null)
+			cantidad = 0;
+		localStorage.setItem(elemento, parseInt(cantidad) + 1);
+		updateElemento(elemento);
+	}
+
+	function remElemento(elemento) {
+		cantidad = localStorage.getItem(elemento);
+		if (cantidad == null)
+			cantidad = 0;
+		if (cantidad > 0)
+			localStorage.setItem(elemento, parseInt(cantidad) - 1);
+		updateElemento(elemento);
+	}
+
+	function updateElemento(elemento) {
+		cantidad = localStorage.getItem(elemento);
+		if (cantidad == null)
+			cantidad = 0;
+		$("#" + elemento).val(cantidad);
+	}
+	
+	function addElementoSession(elemento) {
+		cantidad = sessionStorage.getItem(elemento);
+		if (cantidad == null)
+			cantidad = 0;
+		sessionStorage.setItem(elemento, parseInt(cantidad) + 1);
+		updateElementoSession(elemento);
+	}
+
+	function remElementoSession(elemento) {
+		cantidad = sessionStorage.getItem(elemento);
+		if (cantidad == null)
+			cantidad = 0;
+		if (cantidad > 0)
+			sessionStorage.setItem(elemento, parseInt(cantidad) - 1);
+		updateElementoSession(elemento);
+	}
+
+	function updateElementoSession(elemento) {
+		cantidad = sessionStorage.getItem(elemento);
+		if (cantidad == null)
+			cantidad = 0;
+		$("#" + elemento).val(cantidad);
+	}
+	
+	function addElementoNoSession(elemento) {
+		cantidad = sessionStorage.getItem(elemento);
+		if (noSesion == null)
+			noSesion = 0;
+		noSesion = noSesion+1;
+		updateElementoNoSession(elemento);
+	}
+
+	function remElementoNoSession(elemento) {
+		if (noSesion == null)
+			noSesion = 0;
+		if (noSesion > 0)
+			noSesion = noSesion-1;
+		updateElementoNoSession(elemento);
+	}
+
+	function updateElementoNoSession(elemento) {
+		if (noSesion == null)
+			noSesion = 0;
+		$("#" + elemento).val(noSesion);
+	}
+	
+	
+	
+	/*****fin sesiones*****/
+	
+	
 	
 	
 	
