@@ -7,12 +7,18 @@ h2 { font-size:2.4em; padding:1em 0; color:#4e4e4e; font-weight:normal; margin:0
 #wrapper { width:98em; margin:0 auto; background:#fff url(../images/fondoClaro.png) repeat 0 0}
 #header { margin:1em 0; width:100%;} 
 
-#contenedorCubo { width:59em; min-height:70em; padding:3em 0; position:relative; margin:0 auto; -webkit-perspective: 4000px;}
-#cubo {float:left;width:59em; height:60em; -webkit-transform-style: preserve-3d;-webkit-transform: transform .8s; -webkit-transition: all .8s;}
-#contenedorCubo nav#opcionesCubo { width:59em; height:60em; position:absolute; top:0; -webkit-transform: translateZ(30em); -webkit-transition: all .8s;}
+#contenedorCubo { width:59em; min-height:70em; padding:3em 0; position:relative; margin:0 auto; perspective: 4000px; -webkit-perspective: 4000px;}
+#cubo {float:left;width:59em; height:60em; 
+	transform-style: preserve-3d; -webkit-transform-style: preserve-3d;
+	transform: transform .8s;  -webkit-transform: transform .8s;  -ms-transform: transform .8s; 
+	transition: all .8s; -webkit-transition: all .8s;  -moz-transition: all .8s;}
+#contenedorCubo nav#opcionesCubo { width:59em; height:60em; position:absolute; top:0; 
+	transform: translateZ(30em); -webkit-transform: translateZ(30em); -ms-transform: translateZ(30em); 
+	transition: all .8s; -webkit-transition: all .8s; -moz-transition: all .8s;}
 #contenedorCubo nav#opcionesCubo ul,  #seccionResponsivo ul{ margin:0; padding:0; list-style:none; width:59em;}
-#contenedorCubo nav#opcionesCubo ul li, #seccionResponsivo ul li { display:inline; display:inline-block; width:18em; height:18em; margin:0 2em 2em 0; padding:0; background:#666 url(../images/fondoOpcion.png) repeat 0 0; border-radius:1em;
-							-webkit-transition: all 0.3s ease-in-out;-moz-transition: all 0.3s ease-in-out;}
+#contenedorCubo nav#opcionesCubo ul li, #seccionResponsivo ul li { display:inline; display:inline-block; width:18em; height:18em; margin:0 2em 2em 0; padding:0; background:#666 url(../images/fondoOpcion.png) repeat 0 0; 
+	border-radius:1em; -webkit-border-radius:1em; -moz-border-radius:1em;
+	transition: all 0.3s ease-in-out; -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out;}
 
 #contenedorCubo nav#opcionesCubo ul li:hover {transform: scale(1.1,1.1);-ms-transform: scale(1.1,1.1); -webkit-transform: scale(1.1,1.1); opacity:0.8; filter:alpha(opacity=80)}							
 #contenedorCubo nav#opcionesCubo ul li.finfila, #seccionResponsivo ul li.finfila { margin-right:0;}
@@ -31,20 +37,28 @@ h2 { font-size:2.4em; padding:1em 0; color:#4e4e4e; font-weight:normal; margin:0
 
 /*****tipografias******/
 #seccionTipografias, .seccion {display:none; position:absolute; top:0; width:59em; height:60em; }
-.seccionIzq {-webkit-transform: rotateY(90deg) translateZ(30em);-webkit-transition: all .8s;}
-.seccionDcha {-webkit-transform: rotateY(-90deg) translateZ(30em);-webkit-transition: all .8s;}
-.seccionAbajo {-webkit-transform: rotateX(90deg) translateZ(30em);-webkit-transition: all .8s;}
-.seccionArriba {-webkit-transform: rotateX(-90deg) translateZ(30em);-webkit-transition: all .8s;}
+.seccionIzq {transform: rotateY(90deg) translateZ(30em); -ms-transform: rotateY(90deg) translateZ(30em); -webkit-transform: rotateY(90deg) translateZ(30em);
+			transition: all .8s; -webkit-transition: all .8s; -moz-transition: all .8s;}
+.seccionDcha {transform: rotateY(-90deg) translateZ(30em); -ms-transform: rotateY(-90deg) translateZ(30em); -webkit-transform: rotateY(-90deg) translateZ(30em);
+			transition: all .8s; -webkit-transition: all .8s; -moz-transition: all .8s;}
+.seccionAbajo {transform: rotateX(90deg) translateZ(30em); -ms-transform: rotateX(90deg) translateZ(30em); -webkit-transform: rotateX(90deg) translateZ(30em);
+			transition: all .8s; -webkit-transition: all .8s; -moz-transition: all .8s;}
+.seccionArriba {transform: rotateX(-90deg) translateZ(30em); -ms-transform: rotateX(-90deg) translateZ(30em); -webkit-transform: rotateX(-90deg) translateZ(30em); 
+			transition: all .8s; -webkit-transition: all .8s; -moz-transition: all .8s;}
 #seccionTipografias p, .seccion p { font-size:2em; font-weight:normal; padding:0 0 0 3em;}
 
 p.tipografia1 {font-family:'alex_brushregular'}
 p.tipografia2 {font-family:'chunkfiveroman'}
 p.tipografia3 {font-family:'exoblack'}
 
-#cubo.hoverIzq { -webkit-transform: translateZ(-30em) rotateY(-95deg); -webkit-transition: all .8s;}
-#cubo.hoverAbajo { -webkit-transform: translateZ(-30em) rotateX(-95deg); -webkit-transition: all .8s;}
-#cubo.hoverDcha { -webkit-transform: translateZ(-30em) rotateY(95deg); -webkit-transition: all .8s;}
-#cubo.hoverArriba { -webkit-transform: translateZ(-30em) rotateX(95deg); -webkit-transition: all .8s;}
+#cubo.hoverIzq { transform: translateZ(-30em) rotateY(-95deg); -ms-transform: translateZ(-30em) rotateY(-95deg); -webkit-transform: translateZ(-30em) rotateY(-95deg);
+			transition: all .8s; -webkit-transition: all .8s; -moz-transition: all .8s;}
+#cubo.hoverAbajo { transform: translateZ(-30em) rotateX(-95deg); -ms-transform: translateZ(-30em) rotateX(-95deg); -webkit-transform: translateZ(-30em) rotateX(-95deg); 
+				transition: all .8s; -webkit-transition: all .8s; -moz-transition: all .8s;}
+#cubo.hoverDcha { transform: translateZ(-30em) rotateY(95deg); -ms-transform: translateZ(-30em) rotateY(95deg); -webkit-transform: translateZ(-30em) rotateY(95deg);
+			transition: all .8s; -webkit-transition: all .8s; -moz-transition: all .8s;}
+#cubo.hoverArriba { transform: translateZ(-30em) rotateX(95deg); -ms-transform: translateZ(-30em) rotateX(95deg); -webkit-transform: translateZ(-30em) rotateX(95deg);
+			transition: all .8s; -webkit-transition: all .8s; -moz-transition: all .8s;}
 
 
 /*****geolocalizacion****/

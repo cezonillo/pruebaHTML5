@@ -28,7 +28,12 @@ $(document).ready(function(){
 	$('#js a').on('click', function(){
 		$('#cubo').addClass('hoverIzq');	
 		setTimeout(function(){$('#opcionesCubo').hide();},400)		
-		$('#seccionJavascript').show();		
+		$('#seccionJavascript').show();	
+		// Load the classic theme
+		Galleria.loadTheme('./galleria/themes/classic/galleria.classic.min.js');
+
+		// Initialize Galleria
+		Galleria.run('#galleria');
 	})
 	
 	$('#html5 a').on('click', function(){
@@ -401,7 +406,7 @@ $(document).ready(function(){
 								source: "./images/piedra.jpg",
 								layer:true,
 								x: 120, y: 395,
-								scale: 0.6,
+								scale: 0.8,
 								click:function(layer){
 									juega(1);
 								}
@@ -410,7 +415,7 @@ $(document).ready(function(){
 								source: "./images/piedra-d.jpg",
 								layer:true,
 								x: 460, y: 395,
-								scale: 0.6
+								scale: 0.8
 								
 						});
 						alert("piedra contra piedra; EMPATE :|!"); 
@@ -420,7 +425,7 @@ $(document).ready(function(){
 								source: "./images/piedra.jpg",
 								layer:true,
 								x: 120, y: 395,
-								scale: 0.6,
+								scale: 0.8,
 								click:function(layer){
 									juega(1);
 								}
@@ -429,7 +434,7 @@ $(document).ready(function(){
 								source: "./images/papel-d.jpg",
 								layer:true,
 								x: 460, y: 395,
-								scale: 0.6
+								scale: 0.8
 								
 						});
 						alert("la piedra pierde con el papel; PIERDES :(!"); 
@@ -439,7 +444,7 @@ $(document).ready(function(){
 								source: "./images/piedra.jpg",
 								layer:true,
 								x: 120, y: 395,
-								scale: 0.6,
+								scale: 0.8,
 								click:function(layer){
 									juega(1);
 								}
@@ -448,7 +453,7 @@ $(document).ready(function(){
 								source: "./images/tijera-d.jpg",
 								layer:true,
 								x: 460, y: 395,
-								scale: 0.6
+								scale: 0.8
 								
 						});
 						alert("la piedra gana a la tijera; GANAS :)!"); 
@@ -465,7 +470,7 @@ $(document).ready(function(){
 								source: "./images/papel.jpg",
 								layer:true,
 								x: 120, y: 395,
-								scale: 0.6,
+								scale: 0.8,
 								click:function(layer){
 									juega(1);
 								}
@@ -474,7 +479,7 @@ $(document).ready(function(){
 								source: "./images/piedra-d.jpg",
 								layer:true,
 								x: 460, y: 395,
-								scale: 0.6
+								scale: 0.8
 								
 						});
 						alert("el papel gana a la piedra; GANAS :)!"); 
@@ -484,7 +489,7 @@ $(document).ready(function(){
 								source: "./images/papel.jpg",
 								layer:true,
 								x: 120, y: 395,
-								scale: 0.6,
+								scale: 0.8,
 								click:function(layer){
 									juega(1);
 								}
@@ -493,7 +498,7 @@ $(document).ready(function(){
 								source: "./images/papel-d.jpg",
 								layer:true,
 								x: 460, y: 395,
-								scale: 0.6
+								scale: 0.8
 								
 						});
 						alert("el papel empata con el papel; EMPATE :|!"); 
@@ -503,7 +508,7 @@ $(document).ready(function(){
 								source: "./images/papel.jpg",
 								layer:true,
 								x: 120, y: 395,
-								scale: 0.6,
+								scale: 0.8,
 								click:function(layer){
 									juega(1);
 								}
@@ -512,7 +517,7 @@ $(document).ready(function(){
 								source: "./images/tijera-d.jpg",
 								layer:true,
 								x: 460, y: 395,
-								scale: 0.6
+								scale: 0.8
 								
 						});
 						alert("el papel pierde con la tijera;  PIERDES :(!"); 
@@ -529,7 +534,7 @@ $(document).ready(function(){
 								source: "./images/tijera.jpg",
 								layer:true,
 								x: 120, y: 395,
-								scale: 0.6,
+								scale: 0.8,
 								click:function(layer){
 									juega(1);
 								}
@@ -538,7 +543,7 @@ $(document).ready(function(){
 								source: "./images/piedra-d.jpg",
 								layer:true,
 								x: 460, y: 395,
-								scale: 0.6
+								scale: 0.8
 								
 						});
 						alert("la tijera pierde con la piedra; PIERDES :(!"); 
@@ -548,7 +553,7 @@ $(document).ready(function(){
 								source: "./images/tijera.jpg",
 								layer:true,
 								x: 120, y: 395,
-								scale: 0.6,
+								scale: 0.8,
 								click:function(layer){
 									juega(1);
 								}
@@ -557,7 +562,7 @@ $(document).ready(function(){
 								source: "./images/papel-d.jpg",
 								layer:true,
 								x: 460, y: 395,
-								scale: 0.6
+								scale: 0.8
 								
 						});
 						alert("la tijera gana al papel; GANAS :)! "); 
@@ -567,7 +572,7 @@ $(document).ready(function(){
 								source: "./images/tijera.jpg",
 								layer:true,
 								x: 120, y: 395,
-								scale: 0.6,
+								scale: 0.8,
 								click:function(layer){
 									juega(1);
 								}
@@ -576,7 +581,7 @@ $(document).ready(function(){
 								source: "./images/tijera-d.jpg",
 								layer:true,
 								x: 460, y: 395,
-								scale: 0.6
+								scale: 0.8
 								
 						});
 						alert("la tijera empata con la tijera; EMPATE :|!");
