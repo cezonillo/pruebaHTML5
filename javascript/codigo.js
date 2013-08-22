@@ -321,6 +321,281 @@ $(document).ready(function(){
 	/*****fin funciones drag & drop*****/
 	
 	
+	/******funciones canvas, juego piedra papel o tijera*****/
+	
+	/****cargamos las imágenes al inicio****/
+	
+	/*$("#juego").addLayer({
+	  type: "rectangle",
+	  fillStyle: "#fff",
+	  x: 0, y: 0,
+	  width: 580, height: 500
+	})
+	.drawLayers();*/
+	
+	var random;
+	
+	function pintaInicial(){
+		$("#juego").drawImage({
+				source: "./images/piedra.jpg",
+				layer:true,
+				x: 60, y: 65,
+				scale: 0.6,
+				click:function(layer){
+					juega(1);
+				}
+		});
+		
+		$("#juego").drawImage({
+				source: "./images/papel.jpg",
+				layer:true,
+				x: 60, y: 175,
+				scale: 0.6,
+				click:function(layer){
+					juega(2);
+				}
+		});
+		
+		$("#juego").drawImage({
+				source: "./images/tijera.jpg",
+				layer:true,
+				x: 60, y: 285,
+				scale: 0.6,
+				click:function(layer){
+					juega(3);
+				}
+		});
+		
+		$("#juego").drawImage({
+				source: "./images/piedra-d.jpg",
+				layer:true,
+				x: 520, y: 65,
+				scale: 0.6
+				
+		});
+		
+		$("#juego").drawImage({
+				source: "./images/papel-d.jpg",
+				layer:true,
+				x: 520, y: 175,
+				scale: 0.6
+		});
+		
+		$("#juego").drawImage({
+				source: "./images/tijera-d.jpg",
+				layer:true,
+				x: 520, y: 285,
+				scale: 0.6
+		});
+	}
+	
+	pintaInicial();
+	
+	function juega(opcion){
+		random = Math.floor(Math.random() * 3) + 1;
+		switch(opcion){
+			case 1:
+				switch(random){
+					case 1: 
+						$("#juego").drawImage({
+								source: "./images/piedra.jpg",
+								layer:true,
+								x: 120, y: 395,
+								scale: 0.6,
+								click:function(layer){
+									juega(1);
+								}
+						});
+						$("#juego").drawImage({
+								source: "./images/piedra-d.jpg",
+								layer:true,
+								x: 460, y: 395,
+								scale: 0.6
+								
+						});
+						alert("piedra contra piedra; EMPATE :|!"); 
+						break;
+					case 2: 
+						$("#juego").drawImage({
+								source: "./images/piedra.jpg",
+								layer:true,
+								x: 120, y: 395,
+								scale: 0.6,
+								click:function(layer){
+									juega(1);
+								}
+						});
+						$("#juego").drawImage({
+								source: "./images/papel-d.jpg",
+								layer:true,
+								x: 460, y: 395,
+								scale: 0.6
+								
+						});
+						alert("la piedra pierde con el papel; PIERDES :(!"); 
+						break;
+					case 3: 
+						$("#juego").drawImage({
+								source: "./images/piedra.jpg",
+								layer:true,
+								x: 120, y: 395,
+								scale: 0.6,
+								click:function(layer){
+									juega(1);
+								}
+						});
+						$("#juego").drawImage({
+								source: "./images/tijera-d.jpg",
+								layer:true,
+								x: 460, y: 395,
+								scale: 0.6
+								
+						});
+						alert("la piedra gana a la tijera; GANAS :)!"); 
+						break;
+				}
+				$('#juego').clearCanvas();
+				pintaInicial();
+				return false;
+				
+			case 2:
+				switch(random){
+					case 1: 
+						$("#juego").drawImage({
+								source: "./images/papel.jpg",
+								layer:true,
+								x: 120, y: 395,
+								scale: 0.6,
+								click:function(layer){
+									juega(1);
+								}
+						});
+						$("#juego").drawImage({
+								source: "./images/piedra-d.jpg",
+								layer:true,
+								x: 460, y: 395,
+								scale: 0.6
+								
+						});
+						alert("el papel gana a la piedra; GANAS :)!"); 
+						break;
+					case 2: 
+						$("#juego").drawImage({
+								source: "./images/papel.jpg",
+								layer:true,
+								x: 120, y: 395,
+								scale: 0.6,
+								click:function(layer){
+									juega(1);
+								}
+						});
+						$("#juego").drawImage({
+								source: "./images/papel-d.jpg",
+								layer:true,
+								x: 460, y: 395,
+								scale: 0.6
+								
+						});
+						alert("el papel empata con el papel; EMPATE :|!"); 
+						break;
+					case 3: 
+						$("#juego").drawImage({
+								source: "./images/papel.jpg",
+								layer:true,
+								x: 120, y: 395,
+								scale: 0.6,
+								click:function(layer){
+									juega(1);
+								}
+						});
+						$("#juego").drawImage({
+								source: "./images/tijera-d.jpg",
+								layer:true,
+								x: 460, y: 395,
+								scale: 0.6
+								
+						});
+						alert("el papel pierde con la tijera;  PIERDES :(!"); 
+						break;
+				}
+				$('#juego').clearCanvas();
+				pintaInicial();
+				return false;
+			
+			case 3:
+				switch(random){
+					case 1: 
+						$("#juego").drawImage({
+								source: "./images/tijera.jpg",
+								layer:true,
+								x: 120, y: 395,
+								scale: 0.6,
+								click:function(layer){
+									juega(1);
+								}
+						});
+						$("#juego").drawImage({
+								source: "./images/piedra-d.jpg",
+								layer:true,
+								x: 460, y: 395,
+								scale: 0.6
+								
+						});
+						alert("la tijera pierde con la piedra; PIERDES :(!"); 
+						break;
+					case 2: 
+						$("#juego").drawImage({
+								source: "./images/tijera.jpg",
+								layer:true,
+								x: 120, y: 395,
+								scale: 0.6,
+								click:function(layer){
+									juega(1);
+								}
+						});
+						$("#juego").drawImage({
+								source: "./images/papel-d.jpg",
+								layer:true,
+								x: 460, y: 395,
+								scale: 0.6
+								
+						});
+						alert("la tijera gana al papel; GANAS :)! "); 
+						break;
+					case 3: 
+						$("#juego").drawImage({
+								source: "./images/tijera.jpg",
+								layer:true,
+								x: 120, y: 395,
+								scale: 0.6,
+								click:function(layer){
+									juega(1);
+								}
+						});
+						$("#juego").drawImage({
+								source: "./images/tijera-d.jpg",
+								layer:true,
+								x: 460, y: 395,
+								scale: 0.6
+								
+						});
+						alert("la tijera empata con la tijera; EMPATE :|!");
+						break;
+				}
+				$('#juego').clearCanvas();
+				pintaInicial();
+				return false;
+		}
+	}
+	
+	
+	
+	/******fin funciones canvas, juego piedra papel o tijera*****/
+	
+	
+	
+	
+	
 	
 	
 })

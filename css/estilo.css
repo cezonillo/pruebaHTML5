@@ -57,6 +57,11 @@ p.tipografia3 {font-family:'exoblack'}
 #hucha { width:295px; height:241px; display:block; margin:0 auto; background:url(../images/hucha.jpg) 0 0 no-repeat; margin-top:2em; }
 
 
+
+/*****piedra papel o tijera*****/
+#juego {border:1px solid #666;}
+
+
 /*****estilos varios****/
 p.volver { text-align:right; margin-top:2em;}
 p.volver a , p a{ color:#336699; text-decoration:underline;}
