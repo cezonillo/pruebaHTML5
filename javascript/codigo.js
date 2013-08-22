@@ -1,9 +1,7 @@
 /*****variables javascript***/
 
-/***A utilizar durante la geolocalización****/
 var map;
 var noSesion;
-
 
 /***Lanzamos la funcion cuando se carga el documento***/
 $(document).ready(function(){
@@ -258,10 +256,69 @@ $(document).ready(function(){
 		$("#" + elemento).val(noSesion);
 	}
 	
-	
-	
 	/*****fin sesiones*****/
 	
+	/******funciones drag & drop*****/
+	
+	var hucha = document.getElementById("hucha");
+	var euro = document.getElementById("euro").src;
+	var dolar= document.getElementById("dolar").src;
+	var pound = document.getElementById("pound").src;
+	
+	monedas = document.getElementById("monedas");
+	images = monedas.getElementsByTagName("img");
+	
+	for(i=0; i < images.length; i++){
+		images[i].addEventListener("dragstart", addLight);
+		images[i].addEventListener("dragend", removeLight);
+	}
+	
+	hucha.addEventListener("dragover", cancel);
+	
+	hucha.addEventListener("dragenter", cancel);
+	
+	hucha.addEventListener("drop", function(event) {
+		if (event.preventDefault) {
+			event.preventDefault();
+		}
+		
+		switch(event.dataTransfer.getData("Text")){
+			case euro:
+				alert("Un eurito para la saca!");
+				break;
+				break;
+			case dolar:
+				alert("¡Un dolar para la saca!");
+				break;
+				break;
+			case pound:
+				alert("Una libra para la saca!");
+				break;			
+		}
+		return false;
+	});
+	
+	/**resaltamos el elemento****/
+	function addLight(event) {
+		hucha.classList.add("resaltar");
+		return false;
+	}
+	
+	/*** Eliminamos el resaltado ***/
+	function removeLight(event) {
+		hucha.classList.remove("resaltar");
+		return false;
+	}
+	
+	/*** Elimina el funcionamiento por defecto del evento.****/
+	function cancel(event) {
+		if (event.preventDefault) {
+			event.preventDefault();
+		}
+		return false;
+	}
+	
+	/*****fin funciones drag & drop*****/
 	
 	
 	

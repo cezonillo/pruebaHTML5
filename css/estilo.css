@@ -49,7 +49,12 @@ p.tipografia3 {font-family:'exoblack'}
 
 /*****geolocalizacion****/
 #geo{ background:#336699 url(../images/botonGeo.png) 10px center no-repeat; boder:0; border-radius:8px; font-size:1.5em; color:#fff; margin:-1em 0 1em 0; padding:1em 1em 1em 2.5em;}
-#geo:hover {opacity:0.8; filter:alpha(opacity="80"); cursor:pointer;}
+#geo:hover {opacity:0.8; filter:alpha(opacity=80); cursor:pointer;}
+
+
+/******d&d*****/
+#monedas img { margin:2em;}
+#hucha { width:295px; height:241px; display:block; margin:0 auto; background:url(../images/hucha.jpg) 0 0 no-repeat; margin-top:2em; }
 
 
 /*****estilos varios****/
@@ -63,7 +68,7 @@ p.volver a:hover, p a:hover {text-decoration:none;}
 .destacado {color:#336699;}
 .tac {text-align:center}
 .codigo { width:40em; height:10em; margin-left:5em;}
-
+.resaltar {opacity:0.8; filter:alpha(opacity=80); border:1px solid orange; border-radius:50px;}
 
 /*****javascript galleria*****/
 #galleria{height:320px}
